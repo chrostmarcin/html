@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    workload.user.cattle.io/workloadselector: apps.deployment-nginx-cicd-nginx-cicd
+  name: nginx-cicd
+  namespace: nginx-cicd
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    workload.user.cattle.io/workloadselector: apps.deployment-nginx-cicd-nginx-cicd
+status:
+  loadBalancer: {}

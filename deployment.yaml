@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+  labels:
+    workload.user.cattle.io/workloadselector: apps.deployment-nginx-cicd-nginx-cicd
+  name: nginx-cicd
+  namespace: nginx-cicd
+spec:
+  selector:
+    matchLabels:
+      workload.user.cattle.io/workloadselector: apps.deployment-nginx-cicd-nginx-cicd
+      spec:
+      affinity: {}
+      containers:
+        - image: docker.io/chrostmarcin/nginx:latest
+          imagePullPolicy: Always
+          name: nginx-cicd
