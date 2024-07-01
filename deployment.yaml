@@ -20,3 +20,4 @@ spec:
         - image: docker.io/chrostmarcin/nginx:latest
           imagePullPolicy: Always
           name: nginx-cicd
+
