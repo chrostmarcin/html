@@ -17,7 +17,7 @@ spec:
       namespace: nginx-cicd
     spec:
       containers:
-        - image: docker.io/chrostmarcin/nginx:147
+        - image: docker.io/chrostmarcin/nginx:164
           imagePullPolicy: Always
           name: nginx-cicd
 
