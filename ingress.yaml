@@ -17,8 +17,7 @@ spec:
         number: 8080
   ingressClassName: nginx
   rules:
-    - vKey: 1554407738
-      host: nginxcicd.example.com
+    - host: nginxcicd.example.com
   tls:
     - hosts:
         - nginxcicd.example.com
