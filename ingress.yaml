@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginxcicd
+  annotations:
+    {}
+    #  key: string
+  labels:
+    {}
+    #  key: string
+  namespace: nginx-cicd
+spec:
+  defaultBackend:
+    service:
+      name: nginx-cicd
+      port:
+        number: 8080
+  ingressClassName: nginx
+  rules:
+    - vKey: 1554407738
+      host: nginxcicd.example.com
+  tls:
+    - hosts:
+        - nginxcicd.example.com
